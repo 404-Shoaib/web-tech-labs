@@ -1,0 +1,1 @@
+In this lab, I initialized a local Git repository and connected it to a remote GitHub server. I practiced tracking files, managing deletions, and using branches to isolate experimental code before merging.

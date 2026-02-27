@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head><meta charset="UTF-8"><title>Registration Form</title></head>
+
+<body>
+
+    <nav><a href="index.html">Back to Lab 02</a></nav>
+
+    <h1>Student Registration</h1>
+
+    <form action="https://formspree.io/f/your_form_id" method="POST">
+
+        <label>Name: <input type="text" name="name" required></label><br><br>
+
+        <label>Reg Number: <input type="text" name="reg_no" required></label><br><br>
+
+        <label>Email: <input type="email" name="email" required></label><br><br>
+
+        <label>Password: <input type="password" name="password" required></label><br><br>
+
+        
+
+        <label>Course: 
+
+            <select name="course">
+
+                <option value="cs224">CS 224L Web Tech</option>
+
+                <option value="ai">AI</option>
+
+            </select>
+
+        </label><br><br>
+
+        
+
+        <label>Semester: 
+
+            <input type="radio" name="semester" value="6th"> 6th 
+
+            <input type="radio" name="semester" value="7th"> 7th
+
+        </label><br><br>
+
+        
+
+        <label><input type="checkbox" name="terms" required> I agree to terms and conditions</label><br><br>
+
+        <button type="submit">Register</button>
+
+    </form>
+
+</body>
+
+</html>
+
