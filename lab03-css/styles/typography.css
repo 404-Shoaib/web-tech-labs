@@ -1,0 +1,128 @@
+/* Task 2: Typography Showcase */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Fira+Code:wght@400;600&display=swap');
+
+/* Web-safe fallbacks */
+:root {
+    --font-sans: 'Roboto', Arial, sans-serif;
+    --font-serif: 'Playfair Display', Times, serif;
+    --font-mono: 'Fira Code', Courier, monospace;
+}
+
+body {
+    font-family: var(--font-sans);
+}
+
+.typography-showcase {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-serif);
+    color: #2c3e50;
+}
+
+/* 1. Google Fonts Implementations */
+.font-roboto {
+    font-family: var(--font-sans);
+}
+
+.font-playfair {
+    font-family: var(--font-serif);
+}
+
+.font-fira {
+    font-family: var(--font-mono);
+}
+
+/* 2. Various font sizes using different units */
+.size-px {
+    font-size: 24px;
+}
+
+.size-em {
+    font-size: 1.5em;
+}
+
+/* Relative to parent */
+.size-rem {
+    font-size: 1.5rem;
+}
+
+/* Relative to root */
+.size-vw {
+    font-size: 3vw;
+}
+
+/* Responsive based on viewport width */
+
+/* 3. Text Alignment */
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-justify {
+    text-align: justify;
+}
+
+/* 4. Text Decoration and Transformation */
+.text-underline {
+    text-decoration: underline;
+}
+
+.text-overline {
+    text-decoration: overline;
+}
+
+.text-linethrough {
+    text-decoration: line-through;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-lowercase {
+    text-transform: lowercase;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+/* 5. Text Shadow Effects */
+.shadow-basic {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.shadow-glow {
+    text-shadow: 0 0 10px #3498db;
+    color: #2c3e50;
+}
+
+.shadow-multiple {
+    text-shadow: 1px 1px 0 #ccc, 2px 2px 0 #999, 3px 3px 0 #666;
+    font-size: 3rem;
+}
+
+.shadow-inset {
+    background-color: #333;
+    color: transparent;
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+    background-clip: text;
+    -webkit-background-clip: text;
+}

@@ -1,0 +1,115 @@
+/* Variables and Resets */
+:root {
+    --primary-color: #3498db;
+    --primary-dark: #2980b9;
+    --secondary-color: #2ecc71;
+    --bg-color: #f5f7fa;
+    --text-color: #333;
+    --header-bg: #2c3e50;
+    --header-text: #ecf0f1;
+    --card-bg: #fff;
+    --error-color: #e74c3c;
+    --success-color: #27ae60;
+    --shadow-soft: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-hard: 0 10px 20px rgba(0, 0, 0, 0.15);
+    --border-radius: 8px;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Base Layout */
+header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 2rem;
+    text-align: center;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    margin-top: 4rem;
+}
+
+/* Task 8: Navigation Menu Styling */
+.main-nav {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main-nav li {
+    margin: 0;
+    position: relative;
+}
+
+.main-nav a {
+    display: block;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.main-nav a:hover, .main-nav a.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Dropdown styling (basic) */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: var(--shadow-soft);
+    min-width: 200px;
+}
+.main-nav li:hover .dropdown-menu {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .main-nav ul {
+        flex-direction: column;
+    }
+    .main-nav a {
+        text-align: center;
+        border-bottom: 1px solid #eee;
+    }
+}

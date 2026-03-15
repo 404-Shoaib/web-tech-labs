@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4: Images - Lab 03</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .img-container {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease, filter 0.4s ease;
+        }
+
+        /* 1. Rounded corners and circular */
+        .img-circle {
+            border-radius: 50%;
+            height: 280px;
+            width: 280px;
+            margin: 0 auto;
+        }
+
+        /* 2. Image borders and shadow */
+        .img-border {
+            border: 5px solid #fff;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+
+        /* 3. Hover effects and transitions */
+        .hover-zoom:hover img {
+            transform: scale(1.1);
+        }
+
+        /* 4. CSS Filters */
+        .filter-grayscale img {
+            filter: grayscale(100%);
+        }
+
+        .filter-grayscale:hover img {
+            filter: grayscale(0%);
+        }
+
+        .filter-sepia img {
+            filter: sepia(80%);
+        }
+
+        .filter-blur img:hover {
+            filter: blur(4px);
+        }
+
+        /* 5. Image overlays with text */
+        .img-overlay .overlay {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px;
+            color: white;
+            transition: bottom 0.4s ease;
+        }
+
+        .img-overlay:hover .overlay {
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Image Styling Portfolio</h1>
+        <a href="../index.html" style="color:white;">Back to Home</a>
+    </header>
+
+    <main class="image-gallery">
+        <!-- Circular -->
+        <div class="img-container img-circle">
+            <img src="../images/gallery/portrait.jpg" alt="Circular Image">
+        </div>
+
+        <!-- Border and Shadow -->
+        <div class="img-container img-border hover-zoom">
+            <img src="../images/gallery/architecture.jpg" alt="Bordered Image">
+        </div>
+
+        <!-- Filter Grayscale to Color -->
+        <div class="img-container filter-grayscale hover-zoom">
+            <img src="../images/gallery/nature.jpg" alt="Grayscale to Color">
+        </div>
+
+        <!-- Filter Sepia -->
+        <div class="img-container filter-sepia hover-zoom">
+            <img src="../images/gallery/history.jpg" alt="Sepia Image">
+        </div>
+
+        <!-- Blur on hover -->
+        <div class="img-container filter-blur">
+            <img src="../images/gallery/tech.jpg" alt="Blur Hover">
+            <div class="overlay"
+                style="bottom: 0; background: none; text-align: center; justify-content: center; opacity: 0; transition: opacity 0.4s; z-index: 1;">
+                <h3 style="text-shadow: 2px 2px 4px #000;">Hidden Content</h3>
+            </div>
+        </div>
+
+        <!-- Overlay Text -->
+        <div class="img-container img-overlay">
+            <img src="../images/gallery/abstract.jpg" alt="Overlay Image">
+            <div class="overlay">
+                <h3>Abstract Art</h3>
+                <p>Hover to see details overlay effect.</p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

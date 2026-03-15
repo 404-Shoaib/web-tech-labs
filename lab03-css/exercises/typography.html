@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2: Typography - Lab 03</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/typography.css">
+</head>
+
+<body>
+    <header>
+        <h1>Typography Showcase</h1>
+        <a href="../index.html" style="color:white;">Back to Home</a>
+    </header>
+
+    <main class="typography-showcase">
+        <section>
+            <h2>Google Fonts Implementations</h2>
+            <p class="font-roboto">This is Roboto text (Sans-serif). It's very clean and readable.</p>
+            <p class="font-playfair">This is Playfair Display (Serif), great for headings or formal documents.</p>
+            <p class="font-fira">This is Fira Code (Monospace), widely used for programming code.</p>
+        </section>
+
+        <section>
+            <h2>Font Sizes and Units</h2>
+            <p class="size-px">Font size: 24 pixels (Fixed)</p>
+            <div style="font-size: 16px;">
+                <p class="size-em">Font size: 1.5em (Relative to 16px parent = 24px)</p>
+            </div>
+            <p class="size-rem">Font size: 1.5rem (Relative to root HTML size)</p>
+            <p class="size-vw">Font size: 3vw (Responsive scale)</p>
+        </section>
+
+        <section>
+            <h2>Text Alignment</h2>
+            <p class="align-left">This text is aligned to the <strong>left</strong>.</p>
+            <p class="align-center">This text is aligned to the <strong>center</strong>.</p>
+            <p class="align-right">This text is aligned to the <strong>right</strong>.</p>
+            <p class="align-justify">This text is justified. It spreads out across the full width of the container,
+                leaving clean edges on both left and right sides, much like you would see in a newspaper or a printed
+                book.</p>
+        </section>
+
+        <section>
+            <h2>Decoration & Transformation</h2>
+            <div>
+                <span class="text-underline">Underlined Text</span> |
+                <span class="text-overline">Overlined Text</span> |
+                <span class="text-linethrough">Strikethrough text</span>
+            </div>
+            <br>
+            <div>
+                <p class="text-uppercase">this text becomes uppercase</p>
+                <p class="text-lowercase">THIS TEXT BECOMES LOWERCASE</p>
+                <p class="text-capitalize">this text has capitalized words</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Text Shadows</h2>
+            <p class="shadow-basic font-roboto size-px">Basic Drop Shadow Effect</p>
+            <p class="shadow-glow font-playfair size-px">Neon Glow Text Shadow</p>
+            <h3 class="shadow-multiple font-sans">Multiple Shadows</h3>
+        </section>
+    </main>
+
+</body>
+
+</html>

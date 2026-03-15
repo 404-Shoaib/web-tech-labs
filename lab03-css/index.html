@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS 224L - Web Technologies Lab 03</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/typography.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/effects.css">
+</head>
+
+<body>
+    <header>
+        <h1>CS 224L Web Technologies - Lab 03</h1>
+        <p>Mr. Mohammad, Lecturer | Department of Computer Science | University of Engineering & Technology, Peshawar
+        </p>
+    </header>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="exercises/selectors.html">Selectors</a></li>
+            <li><a href="exercises/typography.html">Typography</a></li>
+            <li><a href="exercises/backgrounds.html">Backgrounds</a></li>
+            <li><a href="exercises/images.html">Images</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="intro">
+            <h2>Lab 03 Portfolio</h2>
+            <p>Welcome to the CSS styling comprehensive lab. Use the navigation to explore different tasks.</p>
+        </section>
+
+        <!-- Task 5: Buttons -->
+        <section id="buttons-showcase">
+            <h2>Button Styling Collection (Task 5)</h2>
+            <div class="card">
+                <button class="btn btn-primary">Primary</button>
+                <button class="btn btn-secondary">Secondary</button>
+                <button class="btn btn-large">Large</button>
+                <button class="btn btn-small">Small</button>
+                <button class="btn btn-rounded">Rounded</button>
+                <button class="btn btn-gradient">Gradient</button>
+                <button class="btn btn-shadow">Shadow</button>
+                <button class="btn btn-disabled" disabled>Disabled</button>
+            </div>
+        </section>
+
+        <!-- Task 6: Forms -->
+        <section id="form-showcase">
+            <h2>Form Styling (Task 6)</h2>
+            <div class="card">
+                <form class="styled-form">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" placeholder="Enter username">
+                    </div>
+                    <div class="form-group error-state">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter email" value="invalid-email">
+                        <span class="error-msg">Please enter a valid email.</span>
+                    </div>
+                    <div class="form-group success-state">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" value="validpass">
+                        <span class="success-msg">Password is strong.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <select id="country">
+                            <option>Select Country</option>
+                            <option>Pakistan</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Task 7: Cards -->
+        <section id="cards-showcase">
+            <h2>Card Component Design (Task 7)</h2>
+            <div class="card-grid">
+                <div class="product-card card">
+                    <div class="card-image bg-placeholder">Image</div>
+                    <div class="card-content">
+                        <h3>Web Design Course</h3>
+                        <p>Learn the basics of HTML, CSS, and JS.</p>
+                        <button class="btn btn-primary">Enroll Now</button>
+                    </div>
+                </div>
+                <div class="product-card card">
+                    <div class="card-image bg-placeholder">Image</div>
+                    <div class="card-content">
+                        <h3>Advanced CSS</h3>
+                        <p>Master animations, Grid and Flexbox.</p>
+                        <button class="btn btn-secondary">Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Task 9: Transforms -->
+        <section id="transforms-showcase">
+            <h2>CSS Transform Gallery (Task 9)</h2>
+            <div class="transform-grid card">
+                <div class="transform-box t-rotate">Rotate</div>
+                <div class="transform-box t-scale">Scale</div>
+                <div class="transform-box t-translate">Translate</div>
+                <div class="transform-box t-3d">3D Rotate</div>
+                <div class="transform-box t-origin">Transform Origin</div>
+                <div class="transform-box t-combined">Combined</div>
+            </div>
+        </section>
+
+        <!-- Task 10: Advanced Effects -->
+        <section id="advanced-showcase">
+            <h2>Advanced Effects (Task 10)</h2>
+            <div class="card">
+                <h3 class="gradient-text">Gradient Text Effect</h3>
+
+                <div class="custom-controls">
+                    <label class="custom-checkbox">
+                        <input type="checkbox" checked>
+                        <span class="checkmark"></span> Custom Checkbox
+                    </label>
+                    <label class="custom-radio">
+                        <input type="radio" name="radio">
+                        <span class="radiomark"></span> Custom Radio
+                    </label>
+                </div>
+
+                <div class="loader"></div>
+
+                <h3 class="clip-text">Background Clipped Text</h3>
+                <div class="complex-shadow-box">Complex Shadow Box</div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2026 M.Shoaib (ID: 24pwbcs1178) - Lab 03 CSS Practices</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,237 @@
+/* Task 9: CSS Transform Gallery */
+.transform-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    padding: 3rem !important;
+}
+
+.transform-box {
+    background-color: var(--primary-color);
+    color: white;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Rotation, scaling, translation */
+.t-rotate:hover {
+    transform: rotate(45deg);
+}
+
+.t-scale:hover {
+    transform: scale(1.2);
+}
+
+.t-translate:hover {
+    transform: translate(20px, -20px);
+}
+
+/* 3D transform */
+.t-3d {
+    perspective: 1000px;
+}
+
+.t-3d:hover {
+    transform: rotateY(180deg);
+}
+
+/* Transform origin */
+.t-origin {
+    transform-origin: top left;
+}
+
+.t-origin:hover {
+    transform: rotate(-15deg);
+}
+
+/* Combined transformations */
+.t-combined:hover {
+    transform: scale(1.1) rotate(10deg) translateX(10px);
+    background-color: var(--secondary-color);
+}
+
+/* Task 10: Advanced Effects Showcase */
+/* Gradient Text */
+.gradient-text {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.custom-controls {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+/* Custom Checkbox */
+.custom-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    user-select: none;
+}
+
+.custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.custom-checkbox:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+.custom-checkbox input:checked~.checkmark {
+    background-color: var(--primary-color);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.custom-checkbox input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Custom Radio */
+.custom-radio {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    user-select: none;
+}
+
+.custom-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.radiomark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.custom-radio:hover input~.radiomark {
+    background-color: #ccc;
+}
+
+.custom-radio input:checked~.radiomark {
+    background-color: var(--secondary-color);
+}
+
+.radiomark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    top: 8px;
+    left: 8px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: white;
+}
+
+.custom-radio input:checked~.radiomark:after {
+    display: block;
+}
+
+/* CSS Loader */
+.loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid var(--primary-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 2rem auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Text clipping with background */
+.clip-text {
+    font-size: 4rem;
+    font-weight: 900;
+    text-align: center;
+    background-image: url('../images/backgrounds/abstract-wide.jpg');
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 3rem 0;
+}
+
+/* Complex Shadow Effects */
+.complex-shadow-box {
+    width: 200px;
+    height: 100px;
+    margin: 2rem auto;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    position: relative;
+    /* Multiple shadows */
+    box-shadow:
+        0 1px 1px rgba(0, 0, 0, 0.11),
+        0 2px 2px rgba(0, 0, 0, 0.11),
+        0 4px 4px rgba(0, 0, 0, 0.11),
+        0 8px 8px rgba(0, 0, 0, 0.11),
+        0 16px 16px rgba(0, 0, 0, 0.11);
+}

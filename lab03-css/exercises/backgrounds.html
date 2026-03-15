@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3: Backgrounds - Lab 03</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        .bg-showcase {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .bg-box {
+            height: 200px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 1. Solid color */
+        .bg-solid {
+            background-color: #e74c3c;
+        }
+
+        /* 2. Image background + repeat patterns */
+        .bg-repeat {
+            background-image: url('../images/backgrounds/pattern.svg');
+            background-repeat: repeat;
+            background-color: #34495e;
+        }
+
+        .bg-no-repeat {
+            /* Using a placeholder service instead of actual local images if missing */
+            background-image: url('../images/backgrounds/nature.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #bdc3c7;
+        }
+
+        /* 3. Linear Gradient */
+        .bg-linear {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        /* 4. Radial Gradient */
+        .bg-radial {
+            background: radial-gradient(circle at center, #f6d365 0%, #fda085 100%);
+        }
+
+        /* 5. Multiple background layers */
+        .bg-multiple {
+            background-image:
+                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('../images/backgrounds/abstract-wide.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* 6. Background blend modes */
+        .bg-blend {
+            background-image: url('../images/backgrounds/city.jpg');
+            background-color: #eb4d4b;
+            background-blend-mode: multiply;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Background Gallery Showcase</h1>
+        <a href="../index.html" style="color:white;">Back to Home</a>
+    </header>
+
+    <main>
+        <div class="bg-showcase">
+            <div class="bg-box bg-solid">Solid Color</div>
+            <div class="bg-box bg-repeat">Repeat Pattern</div>
+            <div class="bg-box bg-no-repeat">No Repeat (Centered)</div>
+            <div class="bg-box bg-linear">Linear Gradient</div>
+            <div class="bg-box bg-radial">Radial Gradient</div>
+            <div class="bg-box bg-multiple">Multiple Layers (Overlay)</div>
+            <div class="bg-box bg-blend">Multiply Blend Mode</div>
+        </div>
+    </main>
+</body>
+
+</html>

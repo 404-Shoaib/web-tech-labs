@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1: CSS Selectors - Lab 03</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        /* 5 Basic Selectors */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* 1. Universal Selectors handled in main.css usually */
+        body {
+            background-color: #f9f9f9;
+        }
+
+        /* 2. Type Selector */
+        .highlight {
+            background-color: #ffeaa7;
+            padding: 5px;
+        }
+
+        /* 3. Class Selector */
+        #unique-element {
+            font-weight: bold;
+            border: 2px dashed #d63031;
+            padding: 10px;
+        }
+
+        /* 4. ID Selector */
+        h1,
+        h2 {
+            color: #2d3436;
+        }
+
+        /* 5. Grouping Selector */
+
+        /* 3 Attribute Selectors */
+        input[type="text"] {
+            border: 2px solid #0984e3;
+            padding: 5px;
+        }
+
+        /* 1. Exact attribute */
+        a[href^="https"] {
+            color: #00b894;
+            font-weight: bold;
+        }
+
+        /* 2. Starts with attribute */
+        [data-status="active"] {
+            border-left: 4px solid #00b894;
+            padding-left: 10px;
+        }
+
+        /* 3. Presence of attribute */
+
+        /* 4 Combinators */
+        .container p {
+            color: #636e72;
+        }
+
+        /* 1. Descendant */
+        .container>p {
+            font-size: 1.1em;
+        }
+
+        /* 2. Child */
+        h2+p {
+            margin-top: 0;
+            font-style: italic;
+        }
+
+        /* 3. Adjacent Sibling */
+        h2~p {
+            letter-spacing: 0.5px;
+        }
+
+        /* 4. General Sibling */
+
+        /* 5 Pseudo-classes */
+        a.hover-link:hover {
+            color: #d63031;
+            text-decoration: underline;
+        }
+
+        /* 1. :hover */
+        input:focus {
+            background-color: #e8f4f8;
+        }
+
+        /* 2. :focus */
+        ul li:first-child {
+            font-weight: bold;
+        }
+
+        /* 3. :first-child */
+        ul li:last-child {
+            color: #74b9ff;
+        }
+
+        /* 4. :last-child */
+        ul li:nth-child(even) {
+            background-color: #dfe6e9;
+        }
+
+        /* 5. :nth-child */
+
+        /* 2 Pseudo-elements */
+        .special-text::first-letter {
+            font-size: 2em;
+            float: left;
+            margin-right: 5px;
+            color: #e17055;
+        }
+
+        /* 1. ::first-letter */
+        .quote::before {
+            content: "“";
+            font-size: 2em;
+            color: #b2bec3;
+        }
+
+        /* 2. ::before */
+        .quote::after {
+            content: "”";
+            font-size: 2em;
+            color: #b2bec3;
+        }
+
+        /* 2. ::after */
+
+        section {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>CSS Selectors Practice</h1>
+        <a href="../index.html" style="color:white;">Back to Home</a>
+    </header>
+
+    <main>
+        <section class="container" id="unique-element">
+            <h2>Basic Selectors & Combinators</h2>
+            <p>This is an adjacent sibling.</p>
+            <p>This is a general sibling.</p>
+            <div data-status="active">
+                <p>This paragraph <span class="highlight">demonstrates class</span> and attribute selectors.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Attribute & Pseudo-classes</h2>
+            <form>
+                <input type="text" placeholder="Text input">
+            </form>
+            <p><a href="https://example.com" class="hover-link">External secure link</a> versus <a
+                    href="http://example.com" class="hover-link">Insecure link</a></p>
+
+            <ul>
+                <li>First item</li>
+                <li>Second item (even)</li>
+                <li>Third item</li>
+                <li>Fourth item (even)</li>
+                <li>Fifth (last) item</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Pseudo-elements</h2>
+            <p class="special-text">Once upon a time, there was a large first letter.</p>
+            <p class="quote">This is a block of quoted text demonstrating pseudo-elements.</p>
+        </section>
+    </main>
+</body>
+
+</html>
